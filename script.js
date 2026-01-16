@@ -1,43 +1,38 @@
+// Mobile Menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("navLinks");
 
-const searchForm = document.getElementById("searchForm");
-const searchInput = document.getElementById("searchInput");
-const searchMessage = document.getElementById("searchMessage");
-
-searchForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    if (searchInput.value.trim() === "") {
-        searchMessage.textContent = "Please enter something to search.";
-        searchMessage.style.color = "red";
-    } else {
-        searchMessage.textContent = "Searching for: " + searchInput.value;
-        searchMessage.style.color = "green";
-    }
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    document.body.style.overflow =
+        navLinks.classList.contains("show") ? "hidden" : "auto";
 });
 
+// Search
+document.getElementById("searchForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const value = document.getElementById("searchInput").value;
 
-const username = document.getElementById("username");
+    document.getElementById("message").innerText =
+        value ? `You searched: ${value}` : "Please enter something";
+});
+
+// Form Validation
+const nameInput = document.getElementById("name");
 const submitBtn = document.getElementById("submitBtn");
-const errorMessage = document.getElementById("errorMessage");
+const errorMsg = document.getElementById("errorMsg");
 
-username.addEventListener("input", function () {
-    if (username.value.trim() === "") {
+nameInput.addEventListener("input", () => {
+    if (nameInput.value.trim() === "") {
         submitBtn.disabled = true;
-        errorMessage.textContent = "Name is required.";
+        errorMsg.innerText = "Name is required";
     } else {
         submitBtn.disabled = false;
-        errorMessage.textContent = "";
+        errorMsg.innerText = "";
     }
 });
 
 document.getElementById("contactForm").addEventListener("submit", function (e) {
     e.preventDefault();
-
-    if (username.value.trim() === "") {
-        errorMessage.textContent = "Form cannot be empty.";
-    } else {
-        alert("Form submitted successfully!");
-        username.value = "";
-        submitBtn.disabled = true;
-    }
+    alert("Form Submitted Successfully!");
 });
