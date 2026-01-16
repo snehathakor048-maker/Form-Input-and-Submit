@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Frontend Internship</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <h1>Static Frontend Internship</h1>
+        <p>Tasks 1 to 8 Implementation</p>
+    </header>
+
+    <!-- Search Bar Component (Task 5) -->
+    <section class="search-section">
+        <h2>Search</h2>
+        <form id="searchForm">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Search here..." 
+                aria-label="Search"
+            >
+            <button type="submit">🔍</button>
+        </form>
+        <p id="searchMessage"></p>
+    </section>
+
+    <!-- Cards Section (Previous Tasks UI) -->
+    <section class="cards-section">
+        <h2>Our Services</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="Frontend Development">
+                <h3>Frontend Development</h3>
+                <p>Building responsive and interactive web interfaces.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn.pixabay.com/photo/2017/01/31/13/14/analysis-2025789_1280.png" alt="UI Design">
+                <h3>UI / UX Design</h3>
+                <p>Designing clean and user-friendly layouts.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_1280.png" alt="JavaScript">
+                <h3>JavaScript</h3>
+                <p>Adding logic and interactivity to websites.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Task 8: Form Input & Submit -->
+    <section class="form-section">
+        <h2>Contact Form</h2>
+
+        <form id="contactForm">
+            
+            <!-- Label connected to input -->
+            <label for="username">Your Name</label>
+            <input 
+                type="text" 
+                id="username" 
+                name="username" 
+                placeholder="Enter your name"
+            >
+
+            <!-- Error message -->
+            <span id="errorMessage"></span>
+
+            <!-- Disabled submit initially -->
+            <button type="submit" id="submitBtn" disabled>
+                Submit
+            </button>
+
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>Static Internship Program · Execution over Explanation</p>
+    </footer>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
