@@ -3,92 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Frontend Internship</title>
+    <title>SATIC Frontend Internship</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="site-header">
-        <h1>Static Frontend Internship</h1>
-        <p>Tasks 1 to 8 Implementation</p>
-    </header>
 
-    <!-- Search Bar Component (Task 5) -->
-    <section class="search-section">
-        <h2>Search</h2>
-        <form id="searchForm">
-            <input 
-                type="text" 
-                id="searchInput" 
-                placeholder="Search here..." 
-                aria-label="Search"
-            >
-            <button type="submit">🔍</button>
-        </form>
-        <p id="searchMessage"></p>
-    </section>
+<header class="navbar">
+    <div class="logo">SATIC</div>
 
-    <!-- Cards Section (Previous Tasks UI) -->
-    <section class="cards-section">
-        <h2>Our Services</h2>
+    <nav class="nav-links" id="navLinks">
+        <a href="#" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <button class="primary-btn">Login</button>
+    </nav>
 
-        <div class="cards">
-            <div class="card">
-                <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="Frontend Development">
-                <h3>Frontend Development</h3>
-                <p>Building responsive and interactive web interfaces.</p>
-            </div>
-
-            <div class="card">
-    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800" alt="UI UX Design">
-    <h3>UI / UX Design</h3>
-    <p>Designing clean and user-friendly layouts.</p>
-</div>
+    <div class="hamburger" id="hamburger">
+        ☰
+    </div>
+</header>
 
 
-            <div class="card">
-                <img src="https://cdn.pixabay.com/photo/2015/04/23/17/41/javascript-736400_1280.png" alt="JavaScript">
-                <h3>JavaScript</h3>
-                <p>Adding logic and interactivity to websites.</p>
-            </div>
-        </div>
-    </section>
+<section class="hero">
+    <h1>Frontend Internship Tasks</h1>
+    <p>All tasks from Day 1 to Day 9 combined in one project.</p>
+</section>
 
-    <!-- Task 8: Form Input & Submit -->
-    <section class="form-section">
-        <h2>Contact Form</h2>
 
-        <form id="contactForm">
-            
-            <!-- Label connected to input -->
-            <label for="username">Your Name</label>
-            <input 
-                type="text" 
-                id="username" 
-                name="username" 
-                placeholder="Enter your name"
-            >
+<section class="cards" id="services">
 
-            <!-- Error message -->
-            <span id="errorMessage"></span>
+    <div class="card">
+        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="Frontend">
+        <h3>Frontend Development</h3>
+        <p>Building responsive and interactive websites.</p>
+        <button class="primary-btn">Explore</button>
+    </div>
 
-            <!-- Disabled submit initially -->
-            <button type="submit" id="submitBtn" disabled>
-                Submit
-            </button>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=800" alt="UI UX">
+        <h3>UI / UX Design</h3>
+        <p>Clean, modern and user-friendly designs.</p>
+        <button class="primary-btn">Explore</button>
+    </div>
 
-        </form>
-    </section>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=800" alt="JavaScript">
+        <h3>JavaScript</h3>
+        <p>Adding logic and interactivity to the web.</p>
+        <button class="primary-btn">Explore</button>
+    </div>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <p>Static Internship Program · Execution over Explanation</p>
-    </footer>
+</section>
 
-    <!-- External JS -->
-    <script src="script.js"></script>
+
+<section class="search-section">
+    <h2>Search Component</h2>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search here...">
+        <button type="submit">Search</button>
+    </form>
+    <p id="message"></p>
+</section>
+
+<!-- day 8  -->
+<section class="form-section" id="contact">
+    <h2>Contact Form</h2>
+
+    <form id="contactForm">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+
+        <span class="error" id="errorMsg"></span>
+
+        <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+</section>
+
+<!-- day 9  -->
+<footer class="footer">
+    <div>
+        <h4>SATIC</h4>
+        <p>Frontend Internship Program</p>
+    </div>
+
+    <div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div>
+        <p>© 2026 SATIC</p>
+    </div>
+</footer>
+
+<!-- JS -->
+<script src="js/script.js"></script>
 </body>
 </html>
